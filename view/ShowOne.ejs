@@ -1,0 +1,151 @@
+<! <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body> 
+        <form>
+        <div class="container">
+           
+             <div class="row">
+                    <div class="col-lg-4 col-lg-offset-5 col-md-4 col-md-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-sm-offset-4">
+                        <h2 class="Title">Add Contract</h2>
+                    </div>
+             </div>
+             <div class="row RowGap">
+                </div>  
+                <!--Prokurimi-->
+             <div class="row panel panel-primary">
+                 <div class="panel-heading">Prokurimi</div>
+                 <div class="panel-body">
+                    
+                      
+                        <div class="form-inline">
+                                <div class="form-group  col-md-offset-2 ">
+                                        <label>Nr. Rendor: </label>
+                                        <input value="<%= docs.nr_Rendor %>" disabled type="number" name="nrRendor" class="form-control" placeholder="Numri Rendor">
+                                 </div>
+                                 <div class="form-group col-sm-offset-1 col-md-offset-1 ">
+                                        <label>Lloji i prokurorimit: </label>
+                                        <input value="<%= docs.Lloji_Prokurorimit %> " disabled name="LlojiIProkurorimit" class="form-control" placeholder="Lloji i prokurimit">
+                                </div>
+                             </div>
+                            </div>   
+                       <div class="form-group col-lg-12 spacing3">
+                                <label>Aktivitete:</label>
+                                <input value="<%= docs.Aktivitete %>" disabled name="Aktivitetet" class="form-control" placeholder="Aktivitete">
+                       </div>
+                  
+                </div>
+                <div class="row RowGap">
+                    </div>        
+        <!--Data-->
+                        <div class="row panel panel-primary">
+                                <div class="panel-heading">Data</div>
+                                <div class="panel-body">
+                                   
+                                        <div class="form-inline">
+                                                <div class="form-group col-md-offset-2">
+                                                        <label> Data e inicimit <br> te prokurorimit: </label>
+                                                        <input id="DataEInicimit" value="<%= docs.data_E_Inicimit %>" disabled name="DataEInicimit" type="date" class="form-control">
+                                                </div>
+                                                <div class="form-group col-sm-offset-1 col-md-offset-1">
+                                                        <label id="align"> Data e inicimit te <br> prokurorimit: </label>
+                                                        
+                                                       <input  value="<%= docs.data_E_Publikimit %>" disabled  name="DataEInicimitTeProkuroimit" id="text" type="date" class="form-control">
+                                                </div>
+                                        </div>
+                                        <div class="form-group spacing3 ">
+                                                <label id="longText">Data e nenshkrimit</label>
+                                                <input disabled  value="<%= docs.data_E_NenShkrimit %>" name="DataENenshkrimit" id="longText" class="form-control" type="date" >
+                                        </div>
+                                        <div class="form-group spacing3 ">
+                                            <div class="col-md-offset-2">
+                                                    <label>Afatet per implementimin e kontrates: </label>
+                                            </div>
+                                                
+                                                <div class="form-inline">
+                                                    <div class="row">
+                                                            <div class="col-md-4 col-md-offset-2 ">
+                                                                    <input value="<%= docs.afati_Prej %>" disabled name="AfatiPrej" id="widthText" class="form-control" type="date">
+                                                                </div>
+                                                                <div  class="col-lg-3 ">
+                                                                        <input value="<%= docs.afati_Deri %>" disabled name="AfatiDeri" id="widthText"  class="form-control" type="date">
+                                                                    </div>
+                                                    </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                        
+                                        <div class="form-group">
+                                                <label>Data e permbylljes se kontratees(data e pranimit
+                                                    te perkoheshem)</label>
+                                                    <input  disabled name="DataEPermbylljes" type="date" class="form-control">
+                                        </div>
+                                    
+                                 </div>
+                    </div>
+
+                    <div class="row RowGap">
+                        </div>  
+<!--Qmimi-->
+                        <div class="row panel panel-primary">
+                            <div class="panel-heading">Qmimi dhe te  dhenat te tjera: </div>
+                            <div class="panel-body">
+                                
+                                    <div class="form-inline">
+                                            <div class="row">
+                                                    <div class="form-group width  col-sm-offset-2 col-lg-2">
+                                                            <label>Qmimi i kontrates</label>
+                                                                <input value="<%= docs.Qmimi_Kontrates %>"  disabled name="QmimiIKontrates" class="form-control " type="text"
+                                                                placeholder="Qmimi me Tax">
+                                                        </div>Qmimi_Total
+                                                        <div class="form-group col-lg-offset-2 ">
+                                                                <label>Qmimi total i paguar <br>kontraten</label>
+                                                                        <input value="<%= docs.Qmimi_Total %>"  disabled name="QmimiIPaguar" class="form-control" placeholder="Qmimi Total">
+                                                        </div>
+                                               </div>
+                                             
+                                           </div>
+                                        </div>
+                                     
+                                    <div class="form-group">
+                                        <label>Pershkrimi:</label>
+                                        <textarea name="Pershkrimi" disabled  placeholder="Pershkrimi" class="form-control"><%= docs.Pershrimi %></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                            <label>Emri i Kompanise: </label>
+                                            <input value="<%= docs.Emri_Kompanis %>" name="EmriIKontrates" disabled  placeholder="Emri i Kompanise" class="form-control">
+                                    </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div  class="row">
+                                <div class="col-lg-6" >
+                                        <button type="submit" class="btn btn-primary btn-block">Posto</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                            <button type="reset" class="btn btn-default btn-block">Reset</button>
+                                    </div>
+                                 
+                        </div>
+                </form>              
+                        <script type="text/js" src="./js/main">
+                               
+        
+                        </script>
+                        <div class="row RowGap">
+                            </div>  
+
+                   
+                </div>  
+</body>
+</html>

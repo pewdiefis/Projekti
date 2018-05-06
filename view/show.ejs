@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Home page:</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.css">
+</head>
+<body>
+    <div class="container-fluid" id="containers">
+
+        <div class="row" id="Title">
+            <div class="col-lg-1 col-lg-offset-5">
+            <h1> 
+                Kontratat
+            </h1>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col-lg-1 col-lg-offset-11">
+                <a href="/shto"><h2>Shto</h2></a>
+            </div>
+        </div>
+       
+        <div>
+                <% docs.map((doc) => { %>
+                <div class=" row panel containers align" id="content">
+                       
+                    <div class="panel-body font"  >
+                        <div class="row" >
+                                <div class="col-lg-2 col-sm-2 col-xs-3">
+                                        <label><%= doc.Emri_Kompanis %></label>
+                                  </div>
+                                  <div class="col-lg-6 col-lg-6 col-sm-6 col-xs-5">
+                                     <a href="/showOne/<%= doc._id %>">Show</a>
+                                  </div>
+                        </div>                
+                        <div class="row">
+                                <div class="col-lg-1 col-sm-1 col-xs-1" id="StateFail" id="fail">
+        
+                                    </div> 
+                <div class="col-lg-1 col-sm-2 col-xs-2" >      
+                        <span>      
+                          <a href="#"><img src="download.jpg" width="120px" height="120px"></a>
+                      </span>
+                </div>
+                <div class=" col-lg-offset-1 col-lg-3 width col-xs-offset-1 col-sm-offset-1 col-xs-7">
+                   <span>
+                      <textarea id="textArea" class="width" disabled><%= doc.Pershrimi %></textarea>
+                   </span>
+                </div>
+              <div class="col-lg-1 col-sm-1 col-xs-3 col-xs-offset-1">
+                    <a href="/edito/<%= doc._id %>"><i class="far fa-edit"></i></a>
+              </div>
+              <div class="col-lg-1 col-lg-1 col-sm-offset-1 col-xs-1">
+                    <a href="/delete/<%= doc._id %>"><i class="fas fa-eraser fa-20px"></i></a>
+                    
+              </div>
+            </div>
+        
+        
+                    
+                
+            </div>
+             
+            </div>
+            <% }); %>
+        </div>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+#Title{
+    color: white;
+     background-color: #9E9E9E;
+ }
+  
+     
+ 
+ .PaneColor{
+     background-color: grey;
+     opacity: 70%;
+     height: 200px;
+ }
+ 
+ .spacing3{
+     margin-top:40px;
+ }
+ .spacing2{
+     margin-top:40px;
+ }
+ .widsth{
+     height: 980px;
+     margin-bottom: 20px;
+ }
+ .RowGap{
+     height: 20px;
+ }
+    
+ /* #align
+     margin-left: -10px;
+ }
+ #text{
+     margin-left: 10px;
+     width: 190px;
+ }
+ #longText{
+     margin-left: -14px;
+     width: 691px;
+     
+ }
+ */
+ #widthText{
+     width: 290px;
+ }
+ /*
+ #dateWidth{
+     width: 284px;
+     margin-right: 85px;
+ }
+ #dateWidth1{
+     width: 34px;
+ }*/
+  
+ .align{
+     margin-top: 100px;
+ }
+ h1{
+     text-align: center;
+ }
+ 
+ .width{
+     height: 117px;
+     width: 400px;
+     display:  inline-block;
+ }
+ 
+ textarea{
+     resize: none;
+     justify-content: left;
+     background-color: transparent;
+     overflow: auto;
+     border:transparent;
+ }
+ #StateSuccess{
+   background-color: rgba(0, 255, 0, .6);
+     height: 119.5px;
+     width: 12px;
+     margin-right: -14.4px;
+     padding-right: 0px;
+ }
+ 
+ #StateFail{
+     background-color:  rgba(255,0,0,.6);
+     height: 119.5px;
+     width: 12px;
+     margin-right: -14.4px;
+     padding-right: 0px;
+   }
+ 
+ #BringForth{
+     position: relative;
+     z-index: 1000;
+ }
+ #content{
+     background-color:#E0E0E0 ;  
+ 
+   
+ }
+ #containers{
+     background-color: #BDBDBD;
+ }
+ /*.font{
+     color: whitesmoke;
+ }
+ */
+ 
+ 

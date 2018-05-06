@@ -1,0 +1,27 @@
+{
+  "name": "projekti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.0.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pewdiefis/Projekti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pewdiefis/Projekti/issues"
+  },
+  "homepage": "https://github.com/pewdiefis/Projekti#readme"
+}
