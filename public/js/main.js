@@ -1,3 +1,4 @@
 $('#reset').click(() => {
    $('#myForm').reset();
 })
+

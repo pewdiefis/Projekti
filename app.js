@@ -38,6 +38,8 @@ app.post('/add',(req,res) =>{
     Qmimi_Total: req.body.QmimiIPaguar,
     Pershrimi: req.body.Pershkrimi,
     Emri_Kompanis:req.body.EmriIKontrates,
+    data_E_Publikimit: req.body.DataEInicimit_E_Publikimit,
+    Data_E_Permbylljes_se_Kontrates: req.body.DataEPermbylljes
     });
     KontrataERe.save(err => {
         if (err) {
@@ -49,6 +51,9 @@ app.post('/add',(req,res) =>{
 })
 app.get('/shto',(req,res) => {
     res.render('post');
+})
+app.get('/Back',(req,res) => {
+    res.redirect('/');
 })
 app.get('/',(req,res) => {
 
@@ -96,11 +101,16 @@ app.get('/',(req,res) => {
             Qmimi_Total: req.body.QmimiIPaguar,
             Pershrimi: req.body.Pershkrimi,
             Emri_Kompanis:req.body.EmriIKontrates,
-            Data_E_Editimit: Date.now}},
+            Data_E_Permbylljes_se_Kontrates: req.body.DataEPermbylljes,
+            State:req.body.state,
+           // Data_E_Editimit:  
+            }},
+
             (err,docs) => {
                 if (err) {
                         console.log(err);
                 }
+                console.log(docs);
                 res.redirect('/');
             }
     )

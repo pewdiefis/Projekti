@@ -56,9 +56,9 @@
                                                         <input value="<%= docs.data_E_Inicimit %>" id="DataEInicimit"   name="DataEInicimit" type="date" class="form-control">
                                                 </div>
                                                 <div class="form-group col-sm-offset-1 col-md-offset-1">
-                                                        <label id="align"> Data e inicimit te <br> prokurorimit: </label>
+                                                        <label id="align"> Data  e <br> publikimit: </label>
                                                         
-                                                       <input  value="<%= docs.data_E_Publikimit %>"   name="DataEInicimitTeProkuroimit" id="text" type="date" class="form-control">
+                                                       <input  disabled value="<%= docs.data_E_Publikimit %>"   name="DataEInicimitTeProkuroimit" id="text" type="date" class="form-control">
                                                 </div>
                                         </div>
                                         <div class="form-group spacing3 ">
@@ -86,7 +86,7 @@
                                         <div class="form-group">
                                                 <label>Data e permbylljes se kontratees(data e pranimit
                                                     te perkoheshem)</label>
-                                                    <input   name="DataEPermbylljes" type="date" class="form-control">
+                                                    <input  value="<%= docs.Data_E_Permbylljes_se_Kontrates %>" name="DataEPermbylljes" type="date" class="form-control">
                                         </div>
                                     
                                  </div>
@@ -105,7 +105,7 @@
                                                             <label>Qmimi i kontrates</label>
                                                                 <input value="<%= docs.Qmimi_Kontrates %>"   name="QmimiIKontrates" class="form-control " type="text"
                                                                 placeholder="Qmimi me Tax">
-                                                        </div>Qmimi_Total
+                                                        </div>
                                                         <div class="form-group col-lg-offset-2 ">
                                                                 <label>Qmimi total i paguar <br>kontraten</label>
                                                                         <input value="<%= docs.Qmimi_Total %>"   name="QmimiIPaguar" class="form-control" placeholder="Qmimi Total">
@@ -119,11 +119,22 @@
                                         <label>Pershkrimi:</label>
                                         <textarea name="Pershkrimi"   placeholder="Pershkrimi" class="form-control"><%= docs.Pershrimi %></textarea>
                                     </div>
+                                  
                                     <div class="form-group">
                                             <label>Emri i Kompanise: </label>
                                             <input value="<%= docs.Emri_Kompanis %>" name="EmriIKontrates"   placeholder="Emri i Kompanise" class="form-control">
                                     </div>
-                                
+                                    <div class="form-group">
+                                        <div class="form-inline">
+                                                
+                                                        <div class="col-lg-4 col-lg-offset-4">
+                                                                        <label>State: </label>
+                                                                     <label class="radioL">Pending  <input value="1" name="state" type="radio"></label>  
+                                                                       <label class="radioL">Done  <input value="2" name="state" type="radio"></label>
+                                                                       <label class="radioL">Fail  <input value="3" id="3" name="state" type="radio"></label>
+                                                        </div>
+                                        </div>
+                            </div>
                             </div>
                         
 
