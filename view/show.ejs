@@ -7,8 +7,14 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+      
 </head>
-<body>
+<body  onload="Load()" >
     <div class="container-fluid" id="containers">
 
         <div class="row" id="Title">
@@ -18,18 +24,26 @@
             </h1>
             </div> 
         </div>
+       
+        
+<script>
+    var array = new Array();
+    var nr = 0;
+    
+</script>
 
         <div class="row">
             <div class="col-lg-1 col-lg-offset-11">
                 <a href="/shto"><h2>Shto</h2></a>
             </div>
-        </div>
-       
+        </div> 
+     
+            
         <div>
-                <% docs.map((doc) => { %>
+                <% docs.map((doc) => {  %>
                 <div class=" row panel containers align" id="content">
-                       
-                    <div class="panel-body font"  >
+
+                    <div class="panel-body font">
                         <div class="row" >
                                 <div class="col-lg-2 col-sm-2 col-xs-3">
                                         <label><%= doc.Emri_Kompanis %></label>
@@ -37,14 +51,19 @@
                                   <div class="col-lg-6 col-lg-6 col-sm-6 col-xs-5">
                                      <a href="/showOne/<%= doc._id %>">Show</a>
                                   </div>
-                        </div>                
+                        </div>       
+                               
                         <div class="row">
-                                <div class="col-lg-1 col-sm-1 col-xs-1" id="StateFail" id="fail">
-                                         
+                           
+                                <div class=" StateFail col-lg-1 col-sm-1 col-xs-1 "  id="<%= doc.State %>">
+                                        
                                     </div> 
+               
                 <div class="col-lg-1 col-sm-2 col-xs-2" >      
                         <span>      
                           <a href="#"><img src="download.jpg" width="120px" height="120px"></a>
+
+                          
                       </span>
                 </div>
                 <div class=" col-lg-offset-1 col-lg-3 width col-xs-offset-1 col-sm-offset-1 col-xs-7">
@@ -61,21 +80,57 @@
               </div>
             </div>
         
-        
-                    
+                     </div>    
                 
-            </div>
-             
-            </div>
-            <% }); %>
+                    <script>
+                        
+                        //   var state = document.getElementById('state')
+                            nr++;
+                            
+                         
+                         for(var i= nr; i< nr+1; i++) {
+
+                             array.push(nr);
+                            
+                         }
+                         console.log(nr)
+                       
+                        </script> 
+        
+             </div>
+          
+             <% }); %>
         </div>
-    <script src="./js/main.js">
-    </script>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-    
-    
+     
+
+        </div>
+        
+            
+           <!-- <script>  
+           
+           console.log(array.length)
+           var state = $( "*input[type=text]" ).val();
+                  for(var i = array.length; i < array.length +1; i++) {
+                  
+               console.log(state)
+             if(state == 1){
+                 $('*#StateFail').css('background-color','blue');
+                 
+             }
+             else if (state == 3){
+               $('*#StateFail').css('background-color','red');
+             }
+             else if (state == 2){
+               $('*#StateFail').css('background-color','green');
+             }
+            
+              
+             
+            }
+            console.log(array);
+           </script>  -->
+           <script src="./js/main.js"></script>
+
 </body>
+
 </html>

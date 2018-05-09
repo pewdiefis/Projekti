@@ -39,12 +39,14 @@ app.post('/add',(req,res) =>{
     Pershrimi: req.body.Pershkrimi,
     Emri_Kompanis:req.body.EmriIKontrates,
     data_E_Publikimit: req.body.DataEInicimit_E_Publikimit,
-    Data_E_Permbylljes_se_Kontrates: req.body.DataEPermbylljes
+    Data_E_Permbylljes_se_Kontrates: req.body.DataEPermbylljes,
+    State: req.body.state,
     });
     KontrataERe.save(err => {
         if (err) {
             console.log(err);
         }
+        
         res.redirect('/');
         console.log(KontrataERe);
     });
@@ -110,6 +112,10 @@ app.get('/',(req,res) => {
                 if (err) {
                         console.log(err);
                 }
+             var state =  docs.State;
+             console.log(state);
+
+               
                 console.log(docs);
                 res.redirect('/');
             }
